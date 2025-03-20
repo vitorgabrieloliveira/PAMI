@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecionar Elemento</title>
+</head>
+<body>
+
+    <button onclick="addVeiculo1()">Adicionar Fusca</button>
+    <button onclick="addVeiculo2()">Adicionar Ferrari</button>
+    <button onclick="addVeiculo3()">Adicionar Uno</button>
+    <button onclick="addVeiculo4()">Adicionar Avião</button>
+    
+    <div id="estacionamento"></div>
+
+    <script>
+        function addVeiculo1(){
+
+            let veiculo_1 = document.createElement('h1');
+            veiculo_1.innerText = 'Fusca';
+            veiculo_1.style.color = 'white';
+            veiculo_1.style.backgroundColor = 'purple';
+            veiculo_1.style.fontSize = '28px';
+            veiculo_1.style.fontFamily = 'impact';
+
+            let imagem = document.createElement('img');
+            imagem.setAttribute('src', 'https://cdn.autopapo.com.br/box/uploads/2019/01/18210228/volkswagen-fusca-itamar-branco-lateral-732x488.jpg');
+            
+            document.querySelector('#estacionamento').appendChild(veiculo_1);
+            document.querySelector('#estacionamento').appendChild(imagem);
+
+        }
+
+        function addVeiculo2(){
+
+            let veiculo_2 = document.createElement('h1');
+            veiculo_2.innerText = 'Ferrari 488 SPIDER';
+            veiculo_2.style.color = 'red';
+            veiculo_2.style.backgroundColor = 'yellow';
+            veiculo_2.style.fontSize = '28px';
+            veiculo_2.style.fontFamily = 'impact';
+
+            let imagem = document.createElement('img');
+            imagem.setAttribute('src', 'https://cdn.motor1.com/images/mgl/koBZ74/s1/ferrari-sf90-xx-stradale-bianco-artico.webp');
+
+            document.querySelector('#estacionamento').appendChild(veiculo_2);
+            document.querySelector('#estacionamento').appendChild(imagem);
+            
+            
+        }
+
+        function addVeiculo3(){
+
+            let veiculo_3 = document.createElement('h1');
+            veiculo_3.innerText = 'Uno CSL';
+            veiculo_3.style.color = 'blue';
+            veiculo_3.style.backgroundColor = 'green';
+            veiculo_3.style.fontSize = '28px';
+            veiculo_3.style.fontFamily = 'impact';
+
+            let imagem = document.createElement('img');
+            imagem.setAttribute('src', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJNPOEYViEz2WijLnsuolMOAAjiT1I91yhfw&s');
+
+            document.querySelector('#estacionamento').appendChild(veiculo_3);
+            document.querySelector('#estacionamento').appendChild(imagem);
+
+        }
+
+
+
+        
+
+    </script>
+    
+</body>
+</html>

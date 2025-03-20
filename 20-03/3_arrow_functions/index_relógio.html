@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+<body>
+
+    <script>
+        let horas = 0;
+        let minutos = 0;
+        let segundos = 0;
+        let timer = document.createElement('h1');
+        timer.style.fontSize = '100px';
+        timer.style.color = 'white';
+        timer.style.textAlign = 'center';
+        timer.style.fontFamily = 'T';
+        timer.style.marginTop = '350px';
+        
+        setInterval(() => {
+            segundos++;
+            if (segundos % 2 == 0) 
+                document.querySelector('body').style.backgroundColor = 'red';
+             else  
+                document.querySelector('body').style.backgroundColor = 'blue';
+
+            if (segundos > 59){
+                minutos++;
+                segundos = 0;
+            }
+
+            if (minutos > 59){
+                horas++;
+                minutos = 0;
+            }
+                   
+            timer.innerText = horas + ':' + minutos + ':' + segundos; 
+
+        }, 1000);
+
+        document.querySelector('body').appendChild(timer);
+    </script>
+
+    
+</body>
+</html>
